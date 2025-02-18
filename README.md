@@ -1,34 +1,38 @@
-# Answers to Technical Questions
+# Task Management Application
 
-## 1. What technologies did you use for this project?
+A simple and intuitive task management web application built with React, featuring local storage persistence and priority-based task organization.
 
-I built this task management application using **React.js** as the frontend framework. The project was bootstrapped with **Create React App**. For data persistence, the application uses the browser’s **localStorage**.
+## Features
 
-## 2. How do you manage the state in this application?
+- **Task Management**:
+  - Create, edit, and delete tasks
+  - Mark tasks as complete/incomplete
+  - Set priority levels (High/Medium/Low)
+  - Add due dates and descriptions
+- **Task Organization**:
+  - Automatic categorization into:
+    - Upcoming Tasks
+    - Overdue Tasks
+    - Completed Tasks
+- **Search & Filter**:
+  - Full-text search across titles and descriptions
+  - Filter by priority level
+  - Filter by completion status
+- **Local Storage**: Persistent data storage in browser
+- **Responsive Design**: Works on both desktop and mobile devices
 
-State is managed using React's **useState** hook for various data elements such as tasks, form inputs, and filter/search criteria. The **useEffect** hook is used both to initialize state from localStorage and to save data whenever the tasks state changes.
+## Live Demo
+https://task-manager-nitish-kumar-singhs-projects-cc6c257f.vercel.app/
 
-## 3. How is data persistence achieved in the application?
+## Getting Started
 
-Data persistence is achieved by utilizing the browser's **localStorage**. When the app loads, tasks are retrieved from localStorage (if available). Whenever tasks are added, updated, or deleted, the changes are automatically saved back to localStorage.
+### Prerequisites
 
-## 4. How does the search and filtering functionality work?
+- Node.js (v14+)
+- npm (v6+)
 
-The application maintains separate state variables for the search query, priority filter, and completion filter. Tasks are filtered based on:
-- **Search Query:** Matching the query with the task's title or description.
-- **Priority Filter:** Comparing the task's priority with the selected filter.
-- **Completion Filter:** Checking the task's completed status against the selected filter criteria.
+### Installation
 
-## 5. How did you ensure that the code is modular and maintainable?
-
-The code is divided into multiple reusable components:
-- **TaskForm:** For adding or editing tasks.
-- **TaskList:** For displaying a list of tasks.
-- **TaskItem:** For each individual task.
-- **SearchFilter:** For filtering and searching tasks.
-  
-This modular design improves readability, reusability, and ease of maintenance.
-
-## 6. What design considerations did you take into account?
-
-The design emphasizes a clean, user-friendly interface with clear sections for upcoming, overdue, and completed tasks. The responsive layout and simple styling ensure that users can efficiently manage and navigate their tasks.
+1. Clone the repository:
+```bash
+git clone https://github.com/nitish102004/task-manager.git
